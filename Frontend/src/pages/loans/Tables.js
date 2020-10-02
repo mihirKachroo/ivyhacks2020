@@ -3,8 +3,8 @@ import { Grid } from "@material-ui/core";
 import MUIDataTable from "mui-datatables";
 
 // components
-import PageTitle from "../../components/PageTitle";
-import Widget from "../../components/Widget";
+import PageTitle from "../../components/PageTitle/PageTitle";
+import Widget from "../../components/Widget/Widget";
 import Table from "../dashboard/components/Table/Table";
 
 // data
@@ -33,7 +33,7 @@ const datatableData = [
 export default function Tables() {
   return (
     <>
-      <PageTitle title="Tables" />
+      <PageTitle title="Loans" />
       <Grid container spacing={4}>
         <Grid item xs={12}>
           <MUIDataTable

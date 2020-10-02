@@ -16,10 +16,10 @@ import Sidebar from "../Sidebar";
 
 // pages
 import Dashboard from "../../pages/dashboard";
-import Typography from "../../pages/typography";
+import Typography from "../../pages/campaigns";
 import Notifications from "../../pages/notifications";
 import Maps from "../../pages/maps";
-import Tables from "../../pages/tables";
+import Tables from "../../pages/loans";
 import Icons from "../../pages/icons";
 import Charts from "../../pages/charts";
 
@@ -45,8 +45,8 @@ function Layout(props) {
             <div className={classes.fakeToolbar} />
             <Switch>
               <Route path="/app/dashboard" component={Dashboard} />
-              <Route path="/app/typography" component={Typography} />
-              <Route path="/app/tables" component={Tables} />
+              <Route path="/app/campaign" component={Typography} />
+              <Route path="/app/loans" component={Tables} />
               <Route path="/app/notifications" component={Notifications} />
               <Route
                 exact
