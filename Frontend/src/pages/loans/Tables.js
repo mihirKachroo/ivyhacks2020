@@ -32,7 +32,7 @@ export default function Tables() {
       <Grid container spacing={4}>
         <Grid item xs={12}>
           <MUIDataTable
-            title="Employee List"
+            title="Creditors List"
             data={datatableData}
             columns={["Name", "Company", "City", "State"]}
             options={{
