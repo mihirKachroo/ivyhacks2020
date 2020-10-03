@@ -32,7 +32,7 @@ db.serialize(function() {
   sql = "INSERT INTO Currencies (name, symbol) VALUES (\"Dollar\", \"$\"), (\"Euro\", \"€\"), (\"Pound\", \"£\");"
   db.run(sql);
 
-  sql = "CREATE TABLE Users (id INTEGER PRIMARY KEY AUTOINCREMENT, email VARCHAR(320), password_hash VARCHAR(64), name VARCHAR(100), currency INTEGER REFERENCES Currencies(id));"
+  sql = "CREATE TABLE Users (id INTEGER PRIMARY KEY AUTOINCREMENT, email VARCHAR(320), password_hash VARCHAR(64), first_name VARCHAR(50), last_name VARCHAR(50), currency INTEGER REFERENCES Currencies(id));"
   db.run(sql);
 
   sql = "CREATE TABLE Addresses (id INTEGER PRIMARY KEY AUTOINCREMENT, user INTEGER REFERENCES Users(id), street1 VARCHAR(255), street2 VARCHAR(255), zip INTEGER, city VARCHAR(255), country VARCHAR(255));"
@@ -48,18 +48,28 @@ db.serialize(function() {
   sql = "CREATE TABLE Transactions (id INTEGER PRIMARY KEY AUTOINCREMENT, campaign INTEGER REFERENCES Campaigns(id), donator INTEGER REFERENCES Users(id), exchange_rate REAL);"; //Exchange rate * donator currency = campaign currency
   db.run(sql);
 
+  sql = "CREATE TABLE Sessions (user VARCHAR(255) PRIMARY KEY, secret_key INTEGER, timestamp INTEGER);";
+  db.run(sql);
 
+
+  //sql = "CREATE TABLE  (id INTEGER REFERENCES Users(id), customer_id VARCHAR(255), account_id VARCHAR(255));";
+  //db.run(sql);
+
+  sql = "CREATE TABLE Accounts (account_id INTEGER, type VARCHAR(120), nickname VARCHAR(120), rewards INTEGER, balance INTEGER, user INTEGER REFERENCES Users(id));";
+  db.run(sql);
+
+  sql = "CREATE TABLE Customers (co_customer_id INTEGER, user INTEGER REFERENCES Users(id));"
+  db.run(sql);
   //Test insertions
 
-  sql = "INSERT INTO Users (email, password_hash, name, currency) VALUES ((?), (?), (?), (?));";
-
+  sql = "INSERT INTO Users (email, password_hash, first_name, last_name, currency) VALUES ((?), (?), (?), (?), (?));";
   let stmt = db.prepare(sql);
 
-  stmt.run("name@example.com","password","Name",1);
-  stmt.run("jwstanly@gmail.com", "running", "John Wright Stanly", 1);
-  stmt.run("willway@outlook.com", "walkng", "Will McCoy", 1);
-  stmt.run("european@eu.org", "fleeing", "A European", 2);
-  stmt.run("brit@britain.com", "expanding", "A Brit", 3);
+  stmt.run("name@example.com","password","Name", "Last",1);
+  stmt.run("jwstanly@gmail.com", "running", "John", "Stanly", 1);
+  stmt.run("willway@outlook.com", "walkng", "Will", "McCoy", 1);
+  stmt.run("european@eu.org", "fleeing", "A", "European", 2);
+  stmt.run("brit@britain.com", "expanding", "A", "Brit", 3);
   //stmt.run("shouldfail@outlook.com", "failing", "A Failure", 3);
 
   //console.log(crypto.createHash("sha256").update("password").digest("hex"));

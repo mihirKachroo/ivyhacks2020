@@ -4,13 +4,9 @@ let error_handles = require("./error_handles.js");
 
 function extractFileExtension(string) {
   let dotIdx = string.lastIndexOf(".");
-
   let slashIdx = string.lastIndexOf("/");
-
   if(dotIdx == -1) return "";
-
   if(dotIdx < slashIdx) return "";
-
   return string.slice(dotIdx, string.length);
 
 }

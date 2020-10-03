@@ -1,16 +1,8 @@
-const sqlite3 = require("sqlite3").verbose();
 let file_handles = require("./file_handles.js");
 let error_handles = require("./error_handles.js");
 
-
-let db = new sqlite3.Database("./ivyhacks.db", sqlite3.OPEN_READWRITE, (err) => {
-  if(err) {
-    return console.error(err.message);
-  }
-  console.log("Connected to the Sqlite database successfully");
-});
-
 let handlesArray = [];
+
 
 /*var mainHandle = {
   path : "/",
@@ -41,18 +33,22 @@ var registerHandle = {
 
     console.log(req.method);
 
-    var data = "";
+    let body = [];
 
     req.on("data", (chunk) => {
       console.log("Receiving data");
-      data += chunk.toString();
+      body.push(chunk);
     });
 
     req.on("end", () => {
-      console.log(data);
 
-      res.writeHead(200, {"Content-Type" : "text/json"});
-      res.end("Hello world");
+      body = Buffer.concat(body).toString();
+
+      console.log(body);
+      console.log(body.length);
+
+      res.writeHead(302, {"Location" : "/user.html"});
+      res.end();
     });
 
 
