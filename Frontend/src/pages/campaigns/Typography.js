@@ -142,7 +142,7 @@ export default function TypographyPage() {
       <Grid container spacing={4}>
         {/*each grid for a running campaign*/}
         <Grid item xs={12} md={6}>
-          <Widget title="Campaign Title Goes Here" disableWidgetMenu>
+          <Widget title="Help me pay off my car!" disableWidgetMenu>
             <div className={classes.dashedBorder}>
               <Card className={classes.root}>
                 <CardMedia
@@ -152,22 +152,32 @@ export default function TypographyPage() {
                 />
               </Card>
               <Typography variant="h4" className={classes.text}>
-                Amount raised: $[current amount pledged]/[amount needed]
+                Amount raised: $170/250
               </Typography>
               <Typography variant="h6" className={classes.text}>
-                Funds Needed By: [date here]
+                Funds Needed By: Friday, October 9th
               </Typography>
               <Typography variant="h6" className={classes.text}>
-                Repayment By: [date here]
+                Repayment By: Tuesday, December 1st
               </Typography>
               <Typography variant="h8" className={classes.text}>
-                Description goes here. Description goes here. Description goes here. Description goes here. Description goes here. Description goes here. Description goes here.Description goes here.Description goes here.Description goes here. Description goes here. Description goes here. 
+                Hello, I am a single mom who has just lost their daytime job. I'm looking for some short term assitance to help me pay the bills while I find another job. I would appreciate any help possible. I will make sure to pay back all loans given. God bless and thank you for your help!
+              </Typography>
+              <br></br><br></br>
+              <Typography variant="h6" className={classes.text}>
+                Loans contributed:
+              </Typography>
+              <Typography variant="subtitle1" className={classes.text}>
+                Mihir Kachroo: $100                
+              </Typography>
+              <Typography variant="subtitle1" className={classes.text}>
+              Harsh Mehta: $70         
               </Typography>
             </div>
           </Widget>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Widget title="Campaign Title Goes Here" disableWidgetMenu>
+          <Widget title="Rent assistance to avoid eviction" disableWidgetMenu>
             <div className={classes.dashedBorder}>
               <Card className={classes.root}>
                 <CardMedia
@@ -177,16 +187,26 @@ export default function TypographyPage() {
                 />
               </Card>
               <Typography variant="h4" className={classes.text}>
-                Amount raised: $[current amount pledged]/[amount needed]
+                Amount raised: $400/1100
               </Typography>
               <Typography variant="h6" className={classes.text}>
-                Funds Needed By: [date here]
+                Funds Needed By: Saturday, October 24th
               </Typography>
               <Typography variant="h6" className={classes.text}>
-                Repayment By: [date here]
+                Repayment By: Friday, January 1st
               </Typography>
               <Typography variant="h8" className={classes.text}>
-                Description goes here. Description goes here. Description goes here. Description goes here. Description goes here. Description goes here. Description goes here.Description goes here.Description goes here.Description goes here. Description goes here. Description goes here. 
+                Hello, I am a single mom who has just lost their daytime job. I usually pay rent just fine, but I need help while I find another job. I will make sure to pay back all the loans given to me. Any help would be greatly appreciated. Feel free to reach out!
+              </Typography>
+              <br></br><br></br>
+              <Typography variant="h6" className={classes.text}>
+                Loans contributed:
+              </Typography>
+              <Typography variant="subtitle1" className={classes.text}>
+                John Wright Stanly: $250                
+              </Typography>
+              <Typography variant="subtitle1" className={classes.text}>
+                Will McCoy: $150         
               </Typography>
             </div>
           </Widget>
