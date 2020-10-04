@@ -20,6 +20,10 @@ import PageTitle from "../../components/PageTitle";
 import Widget from "../../components/Widget";
 import { Typography } from "../../components/Wrappers";
 
+import campaign_image from "../../images/test.jpg"
+import campaign_image2 from "../../images/test2.jpg"
+
+
 const genders = [
   {
     value: 'Male',
@@ -145,13 +149,10 @@ export default function TypographyPage() {
         <Grid item xs={12} md={6}>
           <Widget title="Help me pay off my car!" disableWidgetMenu>
             <div className={classes.dashedBorder}>
-              <Card className={classes.root}>
-                <CardMedia
-                  className={classes.media}
-                  image="../../images/test.jpg"
-                  title="I need a new car!"
-                />
-              </Card>
+              <div className="image">
+                  <img src={campaign_image} alt=""/>
+              </div>
+              <br></br>
               <Typography variant="h4" className={classes.text}>
                 Amount raised: $170/250
               </Typography>
@@ -187,13 +188,10 @@ export default function TypographyPage() {
         <Grid item xs={12} md={6}>
           <Widget title="Rent assistance to avoid eviction" disableWidgetMenu>
             <div className={classes.dashedBorder}>
-              <Card className={classes.root}>
-                <CardMedia
-                  className={classes.media}
-                  image="../../images/test.jpg"
-                  title="I need a new car!"
-                />
-              </Card>
+              <div className="image2">
+                  <img src={campaign_image2} alt=""/>
+              </div>
+              <br></br>
               <Typography variant="h4" className={classes.text}>
                 Amount raised: $400/1100
               </Typography>
