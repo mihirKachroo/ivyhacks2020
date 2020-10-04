@@ -106,6 +106,47 @@ def create_customer():
             "error": "An error occured"
         }), 500
 
+# creating a customer account on sign up
+@app.route("/customers/<customer_id>/accounts", methods=["POST"], endpoint="create_account")
+def create_customer(customer_id):
+    data = request.get_json()
+
+    url = "http://api.reimaginebanking.com/customers/{}/accounts?key={}".format(customer_id, API_KEY)
+    res = requests.post(url, data=json.dumps(data), headers={'content-type':'application/json'})
+
+    if res.status_code != 201:
+        return json.dumps({
+            "success": False,
+            "code": res.status_code,
+            "error": res.message,
+            "fields": res.fields
+        }), 400
+
+    res = res.json()
+    res_data = res.get("objectCreated")
+
+    type = res_data.get("type")
+    nickname = res_data.get("nickname")
+    rewards = res_data.get("rewards")
+    balance = res_data.get("balance")
+    customer_id = res_data.get("customer_id")
+    account_id = res_data.get("_id")
+
+    try:
+        a = Account(type, nickname, rewards, balance, customer_id, account_id)
+        a.insert()
+
+        return json.dumps({
+            "success": True,
+            "customer": json.dumps(res)
+        }), 200
+
+    except:
+        return json.dumps({
+            "success": False,
+            "error": "An error occured"
+        }), 500
+
 
 ## Error Handling
 @app.errorhandler(422)
