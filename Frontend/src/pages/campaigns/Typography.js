@@ -203,7 +203,10 @@ export default function TypographyPage() {
                 Loans contributed:
               </Typography>
               <Typography variant="subtitle1" className={classes.text}>
-                John Wright Stanly: $250                
+                Trip Smith: $85                
+              </Typography>
+              <Typography variant="subtitle1" className={classes.text}>
+                John Wright Stanly: $165                
               </Typography>
               <Typography variant="subtitle1" className={classes.text}>
                 Will McCoy: $150         
