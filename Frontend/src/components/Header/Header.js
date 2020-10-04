@@ -40,40 +40,33 @@ const messages = [
     id: 0,
     variant: "warning",
     name: "Jane Hew",
-    message: "Hey! How is it going?",
+    message: "Sent you a $5 loan.",
     time: "9:32",
   },
   {
     id: 1,
     variant: "success",
     name: "Lloyd Brown",
-    message: "Check out my new Dashboard",
+    message: "Sent you a $5 loan.",
     time: "9:18",
   },
   {
     id: 2,
     variant: "primary",
     name: "Mark Winstein",
-    message: "I want rearrange the appointment",
+    message: "Sent you a $15 loan.",
     time: "9:15",
   },
   {
     id: 3,
     variant: "secondary",
     name: "Liana Dutti",
-    message: "Good news from sale department",
+    message: "Sent you a $1 loan.",
     time: "9:09",
   },
 ];
 
 const notifications = [
-  { id: 0, color: "warning", message: "Check out this awesome ticket" },
-  {
-    id: 1,
-    color: "success",
-    type: "info",
-    message: "What is the best way to get ...",
-  },
   {
     id: 2,
     color: "secondary",
@@ -84,7 +77,7 @@ const notifications = [
     id: 3,
     color: "primary",
     type: "e-commerce",
-    message: "12 new orders has arrived today",
+    message: "12 new loans have been lent to you today",
   },
 ];
 
