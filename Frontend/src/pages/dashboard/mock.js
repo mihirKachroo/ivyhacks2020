@@ -27,18 +27,18 @@ export default {
   ],
   bigStat: [
     {
-      product: "Light Blue",
+      product: "Campaign Analytics",
       total: {
         monthly: 4232,
         weekly: 1465,
         daily: 199,
-        percent: { value: 3.7, profit: false }
+        percent: { value: 3.7, profit: true }
       },
       color: "primary",
       registrations: {
-        monthly: { value: 830, profit: false },
-        weekly: { value: 215, profit: true },
-        daily: { value: 33, profit: true }
+        monthly: { value: 5, profit: false },
+        weekly: { value: 4, profit: true },
+        daily: { value: 3, profit: true }
       },
       bounce: {
         monthly: { value: 4.5, profit: false },
@@ -46,46 +46,6 @@ export default {
         daily: { value: 3.25, profit: true }
       }
     },
-    {
-      product: "Sing App",
-      total: {
-        monthly: 754,
-        weekly: 180,
-        daily: 27,
-        percent: { value: 2.5, profit: true }
-      },
-      color: "warning",
-      registrations: {
-        monthly: { value: 32, profit: true },
-        weekly: { value: 8, profit: true },
-        daily: { value: 2, profit: false }
-      },
-      bounce: {
-        monthly: { value: 2.5, profit: true },
-        weekly: { value: 4, profit: false },
-        daily: { value: 4.5, profit: false }
-      }
-    },
-    {
-      product: "RNS",
-      total: {
-        monthly: 1025,
-        weekly: 301,
-        daily: 44,
-        percent: { value: 3.1, profit: true }
-      },
-      color: "secondary",
-      registrations: {
-        monthly: { value: 230, profit: true },
-        weekly: { value: 58, profit: false },
-        daily: { value: 15, profit: false }
-      },
-      bounce: {
-        monthly: { value: 21.5, profit: false },
-        weekly: { value: 19.35, profit: false },
-        daily: { value: 10.1, profit: true }
-      }
-    }
   ],
   notifications: [
     {
@@ -130,51 +90,51 @@ export default {
   table: [
     {
       id: 0,
-      name: "Mark Otto",
+      name: "Harsh Mehta",
       email: "ottoto@wxample.com",
-      product: "ON the Road",
-      price: "$25 224.2",
-      date: "11 May 2017",
+      product: "Help me pay off my car!",
+      price: "$70",
+      date: "11 May 2020",
       city: "Otsego",
       status: "Sent"
     },
     {
       id: 1,
-      name: "Jacob Thornton",
+      name: "Trip Smith",
       email: "thornton@wxample.com",
-      product: "HP Core i7",
-      price: "$1 254.2",
-      date: "4 Jun 2017",
+      product: "Rent assistance to avoid eviction",
+      price: "$85",
+      date: "4 Jun 2020",
       city: "Fivepointville",
       status: "Sent"
     },
     {
       id: 2,
-      name: "Larry the Bird",
+      name: "John Wright Stanly",
       email: "bird@wxample.com",
-      product: "Air Pro",
-      price: "$1 570.0",
-      date: "27 Aug 2017",
+      product: "Rent assistance to avoid eviction",
+      price: "$165",
+      date: "27 Aug 2020",
       city: "Leadville North",
       status: "Pending"
     },
     {
       id: 3,
-      name: "Joseph May",
+      name: "Mihir Kachroo",
       email: "josephmay@wxample.com",
-      product: "Version Control",
-      price: "$5 224.5",
-      date: "19 Feb 2018",
+      product: "Help me pay off my car!",
+      price: "$100",
+      date: "19 Feb 2020",
       city: "Seaforth",
       status: "Declined"
     },
     {
       id: 4,
-      name: "Peter Horadnia",
+      name: "Will McCoy",
       email: "horadnia@wxample.com",
-      product: "Let's Dance",
-      price: "$43 594.7",
-      date: "1 Mar 2018",
+      product: "Rent assistance to avoid eviction",
+      price: "$150",
+      date: "1 Mar 2020",
       city: "Hanoverton",
       status: "Sent"
     }

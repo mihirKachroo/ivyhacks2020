@@ -9,6 +9,7 @@ import {
   MenuItem,
   Card,
   CardMedia,
+  LinearProgress,
 } from "@material-ui/core";
 
 // styles
@@ -154,6 +155,13 @@ export default function TypographyPage() {
               <Typography variant="h4" className={classes.text}>
                 Amount raised: $170/250
               </Typography>
+              <LinearProgress
+                variant="determinate"
+                value={68}
+                classes={{ barColorPrimary: '#ff7961' }}
+                className={classes.progress}
+              />
+              <br></br>
               <Typography variant="h6" className={classes.text}>
                 Funds Needed By: Friday, October 9th
               </Typography>
@@ -189,6 +197,13 @@ export default function TypographyPage() {
               <Typography variant="h4" className={classes.text}>
                 Amount raised: $400/1100
               </Typography>
+              <LinearProgress
+                variant="determinate"
+                value={36}
+                classes={{ barColorPrimary: classes.progressBar }}
+                className={classes.progress}
+              />
+              <br></br>
               <Typography variant="h6" className={classes.text}>
                 Funds Needed By: Saturday, October 24th
               </Typography>
