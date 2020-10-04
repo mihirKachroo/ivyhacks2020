@@ -10,7 +10,7 @@ function apiPost(scoring_url, token, payload, loadCallback, errorCallback){
 	oReq.addEventListener("error", errorCallback);
 	oReq.open("POST", scoring_url);
 	oReq.setRequestHeader("Accept", "application/json");
-	oReq.setRequestHeader("Authorization", token);
+	oReq.setRequestHeader("Authorization", "Bearer "+token);
 	oReq.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 	oReq.send(payload);
 }
@@ -44,7 +44,10 @@ function get_loan_eligibility(values){
                         '[["' + values.join('","') + '"]]}';
         const scoring_url = "https://us-south.ml.cloud.ibm.com/ml/v4/deployments/0f25fe4d-cc51-4b86-860a-876184d5e49e/predictions";
         
-        if(debugging) console.log("IAM Token:\n" + JSON.stringify(iam_token));
+        if(debugging) {
+            console.log("IAM Token:\n" + JSON.stringify(iam_token));
+            console.log(payload);
+        }
 
         apiPost(scoring_url, iam_token, payload, function(resp){
             let parsedPostResponse;
