@@ -95,10 +95,10 @@ def create_customer():
         c = Customer(full_name, address_line_1, address_line_2, city, state, country, zip, preferred_currency, language, co_customer_id)
         c.insert()
 
-    return json.dumps({
-        "success": True,
-        "customer": json.dumps(res)
-    }), 200
+	    return json.dumps({
+	        "success": True,
+	        "customer": json.dumps(res)
+	    }), 200
 
     except:
         return json.dumps({
