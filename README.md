@@ -1,4 +1,5 @@
 # ivyhacks2020
+Won Best Connectivity Hack at Ivy Hacks 2020
 
 ## Sources
 -**planning doc:** https://docs.google.com/document/d/1FCvegGRqzIsDRWj9KI0lnT8ehy3INxeOXzpVD2gW4_4/edit
